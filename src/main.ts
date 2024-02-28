@@ -6,7 +6,13 @@ import { GlobalExceptionFilter } from './GlobalExceptionFilter';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new GlobalExceptionFilter());
-  app.enableCors({origin: true })
+  app.enableCors({
+    origin: '*',
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+    credentials: true,
+  });
   await app.listen(3000);
 }
 bootstrap();

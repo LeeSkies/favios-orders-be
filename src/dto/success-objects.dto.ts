@@ -1,4 +1,4 @@
-import { Order } from "src/schemas/order.schema"
+import { Order } from "../schemas/order.schema"
 
 export class OrderSuccessObject {
     success: boolean

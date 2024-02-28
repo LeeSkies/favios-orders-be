@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { CreateOrderDto } from 'src/dto/create-order.dto';
-import { OrderSuccessObject } from 'src/dto/success-objects.dto';
+import { CreateOrderDto } from '../dto/create-order.dto';
+import { OrderSuccessObject } from '../dto/success-objects.dto';
 import { Model } from 'mongoose';
-import { OrderDetails } from 'src/schemas/order-details.schema';
-import { Order } from 'src/schemas/order.schema';
+import { OrderDetails } from '../schemas/order-details.schema';
+import { Order } from '../schemas/order.schema';
 
 @Injectable()
 export class OrdersService {
